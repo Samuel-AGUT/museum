@@ -1,23 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class="cequejeveux">Musée virtuel<h1>
+<br><br>
 
+
+<hr width="55%" size="10" color="black"> 
+<h1 class="cequejeveux">Musée virtuel<h1>
+<hr width="55%" size="10" color="black"> 
 
 
 
 <table>
   <thead>
-    
-<br><br>
 
+<br><br>
 <h1>1)Nature et Peinture</h1>
 
-<br>
+
 
 <h2>La nature dans les représentations artistiques au niveau des tableaux permet de créer une
 ambiance et une symbolique. Soit la nature est au coeur du tableau, soit elle a une présence en
 arrière plan afin d’apporter une atmosphère; avec une certaine symbolique.</h2>
 
+
+<br><br>
+<hr width="30%" size="5" color="black"> 
+<br><br>
 
   </thead>
 
@@ -25,8 +32,8 @@ arrière plan afin d’apporter une atmosphère; avec une certaine symbolique.</
   <section class="art-container">
       <% @arts.each do |art| %>
         <div>
-          <p><%= art.author %></p>
-          <p><%= art.description %></p>
+          <p class="auteur"><%= art.author %></p>
+          <p class="description"><%= art.description %></p>
           <p><%= art.title %></p>
           <p><%= art.date %></p>
           <img src="<%= art.photo %>">
@@ -43,3 +50,9 @@ arrière plan afin d’apporter une atmosphère; avec une certaine symbolique.</
 
 
 <%= link_to 'New Art', new_art_path %>
+
+<!--https://agutmuseum.herokuapp.com/arts-->
+
+
+
+

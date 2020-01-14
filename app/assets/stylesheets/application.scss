@@ -13,22 +13,21 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap";
+ @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,800&display=swap');
 
 
 body{
+	background-color: #f1f1f1;
 	margin: 0;
+	font-family: 'Poppins', sans-serif;
 }
 
-.art-container{
-	width: 100vw;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-}
 
 h1{
 	text-align:center;
+	font-size:35px;
+	color:black;
 }
 
 h2{
@@ -39,21 +38,9 @@ h2{
 	margin-right:20%;
 }
 
-.cequejeveux{
 
-	font-size:130px;
-	font-family: 'Cinzel', serif;
+
+
+.navbar {
+	background-color: #3a0750;
 }
-
-.auteur{
-
-	font-size:40px;
-	
-}
-
-.description{
-
-	font-size:20px;
-
-}
-

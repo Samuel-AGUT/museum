@@ -69,6 +69,6 @@ class ArtsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def art_params
-      params.require(:art).permit(:author, :description, :title, :date, :photo)
+      params.require(:art).permit(:author, :description, :title, :date, :photo, :theme_id)
     end
 end

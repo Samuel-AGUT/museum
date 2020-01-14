@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="title-box">
+    <div class="number-box">
+      <p>0<%= @theme.id %></p>
+    </div>
+    <div class="desc-box">
+      <span class="bar"></span>
+      <h1 class="title"><%= @theme.name.upcase %></h1>
+      <p class="desc"><%= @theme.description %></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <% @theme.arts.each do |art| %>
+      <div class="art-item col-md-4">
+        <%= image_tag art.photo %>
+        <p class="author"><%= art.author %></p>
+        <p class="title"><%= art.title %></p>
+        <p class="date"><%= art.date %></p>
+        <p class="description"><%= art.description %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_theme_path(@theme) %> |
+<%= link_to 'Back', themes_path %>

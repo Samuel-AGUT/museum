@@ -13,6 +13,21 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <%= link_to "Musée Virtuel", root_path, class:"navbar-brand" %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <% navigation_themes.each do |theme| %>
+            <% current = (page_select == ("/themes/" + theme.id.to_s) ? "active " : "") + "nav-item nav-link" %>
+            <%= link_to theme.name, theme_path(theme), class:current %>
+          <% end %>
+        </div>
+      </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>
